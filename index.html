@@ -5,8 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <title>PHOTOREALTY</title>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
+  <script src="burger-menu.js"></script>
   <!-- plagin aos  -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -14,7 +17,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script defer src="slider.js"></script>
-  <title>PHOTOREALTY</title>
 </head>
 
 <body>
@@ -27,6 +29,12 @@
           <li class="nav__item item"><a href="#about-us" class="item__link">О нас</a></li>
           <li class="nav__item item"><a href="#contact" class="item__link">Свяжитесь с нами</a></li>
         </ul>
+        <button class="nav__btn btn-reset"></button>
+        <ul class="nav header__nav-mobile list-reset flex">
+          <li class="nav__item item"><a href="#works" class="item__link">Наши работы</a></li>
+          <li class="nav__item item"><a href="#about-us" class="item__link">О нас</a></li>
+          <li class="nav__item item"><a href="#contact" class="item__link">Свяжитесь с нами</a></li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -35,20 +43,19 @@
     <div class="slider-block flex">
       <span class="company-name">PHOTOREALTY</span>
     </div>
-    <div class="swiper">
+    <div class="swiper" id="main-swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="img/slide1.png" alt="slider photo">
+          <img src="img/slide1.JPG" alt="slider photo">
         </div>
         <div class="swiper-slide">
-          <img src="img/slide2.png" alt="slider photo">
+          <img src="img/slide2.JPG" alt="slider photo">
         </div>
         <div class="swiper-slide">
-          <img src="img/slide3.png" alt="slider photo">
+          <img src="img/slide3.JPG" alt="slider photo">
         </div>
       </div>
     </div>
-
     <!-- end swiper  -->
 
     <!-- секция с портфолио  -->
@@ -59,20 +66,73 @@
           <button class="works__button btn btn-reset">Смотреть больше</button>
           <div class="works__content-photos photos flex">
             <div class="photos__photo flex">
-              <img src="img/photo-1.jpg" alt="photo">
-              <img src="img/photo-7.png" alt="photo">
+              <div class="photo">
+                <img src="img/photo1.JPG" alt="photo">
+              </div>
+              <div class="photo">
+                <img src="img/photo2.JPG" alt="photo">
+              </div>
             </div>
             <div class="photos__photo flex">
-              <img src="img/photo-3.png" alt="photo">
-              <img src="img/photo-2.png" alt="photo">
-              <img src="img/photo-8.png" alt="photo">
+              <div class="photo">
+                <img src="img/photo3.JPG" alt="photo">
+              </div>
+              <div class="photo">
+                <img src="img/photo4.JPG" alt="photo">
+              </div>
+              <div class="photo">
+                <img src="img/photo5.JPG" alt="photo">
+              </div>
             </div>
             <div class="photos__photo flex">
-              <img src="img/photo-5.png" alt="photo">
+              <div class="photo">
+                <img src="img/photo-12.JPG" alt="photo">
+              </div>
             </div>
             <div class="photos__photo flex">
-              <img src="img/photo-4.png" alt="photo">
-              <img src="img/photo-6.png" alt="photo">
+              <div class="photo">
+                <img src="img/photo7.JPG" alt="photo">
+              </div>
+              <div class="photo">
+                <img src="img/photo6.JPG" alt="photo">
+              </div>
+            </div>
+          </div>
+          <div class="works__slider">
+            <div class="swiper" id="works-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="img/photo1.JPG" alt="slider photo">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/photo2.JPG" alt="slider photo">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/photo3.JPG" alt="slider photo">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/photo4.JPG" alt="slider photo">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/photo5.JPG" alt="slider photo">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/photo6.JPG" alt="slider photo">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/photo7.JPG" alt="slider photo">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/photo11.JPG" alt="slider photo">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/photo9.JPG" alt="slider photo">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/photo10.JPG" alt="slider photo">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -85,11 +145,15 @@
         <div class="about-us__content content flex">
           <div class="content__block flex">
             <button class="about-us__button btn btn-reset">Сделать заказ</button>
-            <img src="img/photo-9.png" alt="photo" class="about-us__photo">
+            <div class="photo">
+              <img src="img/photo9.JPG" alt="photo" class="about-us__photo">
+            </div>
           </div>
           <div class="content__block flex">
             <button class="about-us__button btn btn-reset">Наше портфолио</button>
-            <img src="img/photo-10.png" alt="photo" class="about-us__photo">
+            <div class="photo">
+              <img src="img/photo1.JPG" alt="photo" class="about-us__photo">
+            </div>
           </div>
           <div class="content__block flex">
             <h2 class="about-us__title title">О нас</h2>
@@ -110,7 +174,9 @@
           </div>
           <div class="content__block flex">
             <button class="about-us__button btn btn-reset">Акции</button>
-            <img src="img/photo-11.png" alt="photo" class="about-us__photo">
+            <div class="photo">
+              <img src="img/photo10.JPG" alt="photo" class="about-us__photo">
+            </div>
           </div>
         </div>
       </div>
@@ -171,4 +237,5 @@
     AOS.init();
   </script>
 </body>
+
 </html>
